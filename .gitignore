@@ -1,0 +1,16 @@
+**/*mnist_test.csv
+**/*mnist_train.csv
+**/sklearn-venv/
+**/__pycache__
+**/_minted*/**
+*.DS_Store
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+**/cifar-10*/**
+**/cifar-10*
