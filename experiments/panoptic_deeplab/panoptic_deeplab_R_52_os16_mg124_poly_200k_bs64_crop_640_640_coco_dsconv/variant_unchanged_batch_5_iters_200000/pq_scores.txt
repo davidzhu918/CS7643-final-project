@@ -1,0 +1,127 @@
+Panoptic Evaluation Results:
+|        |   PQ   |   SQ   |   RQ   |  #categories  |
+|:------:|:------:|:------:|:------:|:-------------:|
+|  All   | 20.296 | 69.768 | 26.378 |      133      |
+| Things | 19.866 | 71.434 | 25.795 |      80       |
+| Stuff  | 20.944 | 67.253 | 27.257 |      53       |
+[12/06 02:01:34 d2.evaluation.coco_evaluation]: Preparing results for COCO format ...
+[12/06 02:01:34 d2.evaluation.coco_evaluation]: Saving results to ./output/inference/coco_instances_results.json
+[12/06 02:01:34 d2.evaluation.coco_evaluation]: Evaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.04s)
+creating index...
+index created!
+[12/06 02:01:34 d2.evaluation.fast_eval_api]: Evaluate annotation type *bbox*
+[12/06 02:01:42 d2.evaluation.fast_eval_api]: COCOeval_opt.evaluate() finished in 7.68 seconds.
+[12/06 02:01:42 d2.evaluation.fast_eval_api]: Accumulating evaluation results...
+[12/06 02:01:43 d2.evaluation.fast_eval_api]: COCOeval_opt.accumulate() finished in 0.65 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.085
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.155
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.079
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.012
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.070
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.152
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.103
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.138
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.139
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.014
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.108
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.256
+[12/06 02:01:43 d2.evaluation.coco_evaluation]: Evaluation results for bbox: 
+|  AP   |  AP50  |  AP75  |  APs  |  APm  |  APl   |
+|:-----:|:------:|:------:|:-----:|:-----:|:------:|
+| 8.549 | 15.495 | 7.928  | 1.160 | 7.046 | 15.163 |
+[12/06 02:01:43 d2.evaluation.coco_evaluation]: Per-category bbox AP: 
+| category      | AP     | category     | AP     | category       | AP     |
+|:--------------|:-------|:-------------|:-------|:---------------|:-------|
+| person        | 15.990 | bicycle      | 4.540  | car            | 9.271  |
+| motorcycle    | 11.077 | airplane     | 28.320 | bus            | 31.796 |
+| train         | 33.969 | truck        | 8.678  | boat           | 2.092  |
+| traffic light | 3.595  | fire hydrant | 29.489 | stop sign      | 27.260 |
+| parking meter | 7.802  | bench        | 4.926  | bird           | 1.853  |
+| cat           | 13.505 | dog          | 14.239 | horse          | 16.442 |
+| sheep         | 10.927 | cow          | 10.755 | elephant       | 27.415 |
+| bear          | 28.213 | zebra        | 34.046 | giraffe        | 32.459 |
+| backpack      | 0.134  | umbrella     | 6.515  | handbag        | 0.149  |
+| tie           | 0.396  | suitcase     | 4.938  | frisbee        | 14.250 |
+| skis          | 0.729  | snowboard    | 2.525  | sports ball    | 6.644  |
+| kite          | 9.310  | baseball bat | 1.279  | baseball glove | 2.180  |
+| skateboard    | 8.067  | surfboard    | 4.312  | tennis racket  | 4.925  |
+| bottle        | 1.083  | wine glass   | 1.263  | cup            | 3.253  |
+| fork          | 0.693  | knife        | 0.036  | spoon          | 0.000  |
+| bowl          | 3.295  | banana       | 2.135  | apple          | 0.811  |
+| sandwich      | 1.333  | orange       | 4.644  | broccoli       | 2.438  |
+| carrot        | 0.339  | hot dog      | 1.785  | pizza          | 3.826  |
+| donut         | 2.821  | cake         | 0.828  | chair          | 2.229  |
+| couch         | 14.466 | potted plant | 2.141  | bed            | 21.024 |
+| dining table  | 3.923  | toilet       | 19.102 | tv             | 20.477 |
+| laptop        | 12.807 | mouse        | 12.857 | remote         | 0.134  |
+| keyboard      | 7.037  | cell phone   | 3.044  | microwave      | 10.270 |
+| oven          | 6.752  | toaster      | 0.000  | sink           | 6.106  |
+| refrigerator  | 18.033 | book         | 0.759  | clock          | 9.047  |
+| vase          | 1.672  | scissors     | 0.226  | teddy bear     | 6.211  |
+| hair drier    | 0.000  | toothbrush   | 0.000  |                |        |
+Loading and preparing results...
+DONE (t=0.49s)
+creating index...
+index created!
+[12/06 02:01:45 d2.evaluation.fast_eval_api]: Evaluate annotation type *segm*
+[12/06 02:01:54 d2.evaluation.fast_eval_api]: COCOeval_opt.evaluate() finished in 9.23 seconds.
+[12/06 02:01:54 d2.evaluation.fast_eval_api]: Accumulating evaluation results...
+[12/06 02:01:55 d2.evaluation.fast_eval_api]: COCOeval_opt.accumulate() finished in 0.67 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.092
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.170
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.088
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.007
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.071
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.203
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.103
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.133
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.012
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.106
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.258
+[12/06 02:01:57 d2.evaluation.coco_evaluation]: Evaluation results for segm: 
+|  AP   |  AP50  |  AP75  |  APs  |  APm  |  APl   |
+|:-----:|:------:|:------:|:-----:|:-----:|:------:|
+| 9.227 | 17.038 | 8.775  | 0.717 | 7.076 | 20.295 |
+[12/06 02:01:57 d2.evaluation.coco_evaluation]: Per-category segm AP: 
+| category      | AP     | category     | AP     | category       | AP     |
+|:--------------|:-------|:-------------|:-------|:---------------|:-------|
+| person        | 12.440 | bicycle      | 3.236  | car            | 9.272  |
+| motorcycle    | 7.637  | airplane     | 21.227 | bus            | 32.673 |
+| train         | 38.560 | truck        | 9.512  | boat           | 2.049  |
+| traffic light | 3.778  | fire hydrant | 32.971 | stop sign      | 34.780 |
+| parking meter | 10.829 | bench        | 3.643  | bird           | 2.578  |
+| cat           | 16.279 | dog          | 14.495 | horse          | 11.583 |
+| sheep         | 9.933  | cow          | 9.049  | elephant       | 25.883 |
+| bear          | 36.779 | zebra        | 28.557 | giraffe        | 25.212 |
+| backpack      | 0.141  | umbrella     | 11.148 | handbag        | 0.149  |
+| tie           | 0.581  | suitcase     | 5.129  | frisbee        | 12.099 |
+| skis          | 0.182  | snowboard    | 1.617  | sports ball    | 7.472  |
+| kite          | 3.473  | baseball bat | 0.565  | baseball glove | 4.378  |
+| skateboard    | 2.286  | surfboard    | 3.724  | tennis racket  | 14.558 |
+| bottle        | 2.325  | wine glass   | 2.044  | cup            | 5.578  |
+| fork          | 0.297  | knife        | 0.012  | spoon          | 0.017  |
+| bowl          | 6.226  | banana       | 1.400  | apple          | 1.538  |
+| sandwich      | 3.755  | orange       | 7.279  | broccoli       | 2.659  |
+| carrot        | 0.562  | hot dog      | 1.551  | pizza          | 6.131  |
+| donut         | 8.953  | cake         | 2.877  | chair          | 2.115  |
+| couch         | 13.888 | potted plant | 1.939  | bed            | 15.634 |
+| dining table  | 0.596  | toilet       | 28.748 | tv             | 26.021 |
+| laptop        | 16.330 | mouse        | 16.041 | remote         | 0.195  |
+| keyboard      | 12.504 | cell phone   | 4.743  | microwave      | 16.560 |
+| oven          | 6.705  | toaster      | 0.000  | sink           | 10.089 |
+| refrigerator  | 18.603 | book         | 0.641  | clock          | 10.986 |
+| vase          | 3.233  | scissors     | 1.188  | teddy bear     | 7.761  |
+| hair drier    | 0.000  | toothbrush   | 0.000  |                |        |
+[12/06 02:02:00 d2.engine.defaults]: Evaluation results for coco_2017_val_panoptic in csv format:
+[12/06 02:02:00 d2.evaluation.testing]: copypaste: Task: panoptic_seg
+[12/06 02:02:00 d2.evaluation.testing]: copypaste: PQ,SQ,RQ,PQ_th,SQ_th,RQ_th,PQ_st,SQ_st,RQ_st
+[12/06 02:02:00 d2.evaluation.testing]: copypaste: 20.2957,69.7680,26.3778,19.8663,71.4344,25.7953,20.9438,67.2527,27.2571
+[12/06 02:02:00 d2.evaluation.testing]: copypaste: Task: bbox
+[12/06 02:02:00 d2.evaluation.testing]: copypaste: AP,AP50,AP75,APs,APm,APl
+[12/06 02:02:00 d2.evaluation.testing]: copypaste: 8.5490,15.4952,7.9285,1.1602,7.0459,15.1626
+[12/06 02:02:00 d2.evaluation.testing]: copypaste: Task: segm
+[12/06 02:02:00 d2.evaluation.testing]: copypaste: AP,AP50,AP75,APs,APm,APl
+[12/06 02:02:00 d2.evaluation.testing]: copypaste: 9.2273,17.0380,8.7749,0.7172,7.0757,20.2955

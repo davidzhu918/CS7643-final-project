@@ -4,6 +4,7 @@
 **/__pycache__
 **/_minted*/**
 *.DS_Store
+*.pth
 *.aux
 *.bbl
 *.bcf

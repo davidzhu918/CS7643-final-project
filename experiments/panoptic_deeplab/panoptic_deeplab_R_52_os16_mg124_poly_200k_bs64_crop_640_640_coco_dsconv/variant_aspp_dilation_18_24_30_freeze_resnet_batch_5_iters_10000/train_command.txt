@@ -1,0 +1,10 @@
+%env DETECTRON2_DATASETS=/content/datasets
+
+# Train on a Panoptic Deeplab model
+!python ./detectron2/projects/Panoptic-DeepLab/train_net.py --num-gpus 1 --num-machines 1 \
+  --config-file ./detectron2/projects/Panoptic-DeepLab/configs/COCO-PanopticSegmentation/panoptic_deeplab_R_52_os16_mg124_poly_200k_bs64_crop_640_640_coco_dsconv.yaml \
+  MODEL.RESNETS.NORM "BN" MODEL.INS_EMBED_HEAD.NORM "BN" MODEL.SEM_SEG_HEAD.NORM "BN" \
+  SOLVER.MAX_ITER 10000 SOLVER.IMS_PER_BATCH 5 SOLVER.BASE_LR 0.0025 \
+  MODEL.BACKBONE.FREEZE_AT 2 \
+  MODEL.SEM_SEG_HEAD.ASPP_DILATIONS "[18, 24, 30]" \
+  MODEL.INS_EMBED_HEAD.ASPP_DILATIONS "[18, 24, 30]"
