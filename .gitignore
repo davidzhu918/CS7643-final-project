@@ -6,6 +6,7 @@
 *.DS_Store
 *.aux
 *.bbl
+*.pth
 *.bcf
 *.blg
 *.log
