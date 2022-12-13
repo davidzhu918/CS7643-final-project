@@ -7,7 +7,8 @@ In this project, we present using various deep-learning approaches to perform im
 ## Implementation of a modified Resnet backbone 
 
 Relevant code can be in the following directory  
-experiments  
+
+  ./experiments  
   --panoptic_fpn
     --panoptic_fpn_R_50_3x_one_more_bottle_neck  
       --resnet.py
@@ -15,7 +16,8 @@ experiments
 ## Impletement of a VGG backbone 
 
 Relevant code can be found in the following directory  
-  experiments  
+
+  ./experiments  
   --panoptic_fpn  
     --panoptic_fpn_VGG_backbone  
       --fpn.py  
