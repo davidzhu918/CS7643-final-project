@@ -22,3 +22,13 @@ Relevant code can be found in the following directory
     --panoptic_fpn_VGG_backbone  
       --fpn.py  
       --vgg19.py
+
+## Implementation of a Res2Net backbone:
+
+Relevant code can be found in the following directories:
+  ./experiments
+  --panoptic_fpn
+    --panoptic_fpn_r_101_3x
+
+Entire mask-rcnn folder in root directory can be ignored for results.
+It was largely using a tutorial in order to understand the implementation initially.
