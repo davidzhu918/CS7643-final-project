@@ -26,6 +26,7 @@ Relevant code can be found in the following directory
 ## Implementation of a Res2Net backbone:
 
 Relevant code can be found in the following directories:
+
   ./experiments
   --panoptic_fpn
     --panoptic_fpn_r_101_3x
