@@ -16,7 +16,7 @@ experiments
 
 Relevant code can be found in the following directory  
 experiments
---panoptic_fpn
-  --panoptic_fpn_VGG_backbone
-    --fpn.py
+--panoptic_fpn  
+  --panoptic_fpn_VGG_backbone  
+    --fpn.py  
     --vgg19.py
