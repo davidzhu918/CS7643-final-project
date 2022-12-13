@@ -42,3 +42,9 @@ Relevant code can be found in the following directories:
 
 Entire mask-rcnn folder in root directory can be ignored for results.
 It was largely using a tutorial in order to understand the implementation initially.
+
+## Evaluation of DETR
+
+Relevant code can be found in the following directories:
+
+  ./DETR_panoptic_eval.ipynb
