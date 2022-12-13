@@ -11,6 +11,7 @@
 *.blg
 *.log
 *.out
+*.pth
 *.run.xml
 *.synctex.gz
 **/cifar-10*/**
