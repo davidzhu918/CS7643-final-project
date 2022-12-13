@@ -9,11 +9,11 @@ In this project, we present using various deep-learning approaches to perform im
 Relevant code can be in the following directory  
 
   ./experiments  
-  --panoptic_fpn
+  --panoptic_fpn    
     --panoptic_fpn_R_50_3x_one_more_bottle_neck  
       --resnet.py
     
-## Impletement of a VGG backbone 
+## Implementation of a VGG backbone 
 
 Relevant code can be found in the following directory  
 
