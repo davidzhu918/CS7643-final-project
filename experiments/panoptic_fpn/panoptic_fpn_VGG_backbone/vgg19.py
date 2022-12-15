@@ -1,4 +1,4 @@
-# the modification is based on detectron2. 
+# The modification is based on detectron2. 
 # Copyright (c) Facebook, Inc. and its affiliates.
 import numpy as np
 import fvcore.nn.weight_init as weight_init
@@ -32,8 +32,8 @@ __all__ = [
 
 class Stem(CNNBlockBase):
     """
-    The standard ResNet stem (layers before the first residual block),
-    with a conv, relu and max_pool.
+    The standard stem (layers before the first residual block),
+    with conv, relu and max_pool.
     """
 
     def __init__(self, in_channels=3, out_channels=128, norm="BN"):
@@ -106,8 +106,8 @@ class Stem(CNNBlockBase):
 
 class Res2(CNNBlockBase):
     """
-    The standard ResNet stem (layers before the first residual block),
-    with a conv, relu and max_pool.
+    The first stack of layers that will be fed into FPN,
+    with conv, relu and max_pool.
     """
 
     def __init__(self, in_channels=128, out_channels=256, norm="BN"):
@@ -177,8 +177,7 @@ class Res2(CNNBlockBase):
 
 class Res3(CNNBlockBase):
     """
-    The standard ResNet stem (layers before the first residual block),
-    with a conv, relu and max_pool.
+    The second stack of layers
     """
 
     def __init__(self, in_channels=256, out_channels=512, norm="BN"):
@@ -248,8 +247,7 @@ class Res3(CNNBlockBase):
 
 class Res4(CNNBlockBase):
     """
-    The standard ResNet stem (layers before the first residual block),
-    with a conv, relu and max_pool.
+    The third stack of layers
     """
 
     def __init__(self, in_channels=512, out_channels=512, norm="BN"):
@@ -319,8 +317,7 @@ class Res4(CNNBlockBase):
 
 class Res5(CNNBlockBase):
     """
-    The standard ResNet stem (layers before the first residual block),
-    with a conv, relu and max_pool.
+    The final stack of layers
     """
 
     def __init__(self, in_channels=512, out_channels=512, norm="BN"):
@@ -389,7 +386,8 @@ class Res5(CNNBlockBase):
 
 class VGG(Backbone):
     """
-    Implement :paper:`ResNet (VGG part)`.
+    Implement :paper:`ResNet (VGG part with the fourth stack being added)`. 
+    The implementation is modified based on the original Resnet backbone class 
     """
 
     def __init__(self, stem, stages, num_classes=None, out_features=None, freeze_at=0):
@@ -442,7 +440,6 @@ class VGG(Backbone):
         self.stage_names = tuple(self.stage_names)  # Make it static for scripting
 
         if num_classes is not None:
-            #self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
             self.linear1 = nn.Linear(curr_channels, 4096)
             self.linear2 = nn.Linear(4096, 4096)
             self.linear3 = nn.Linear(4096, num_classes)
@@ -614,10 +611,10 @@ def make_stage(*args, **kwargs):
 @BACKBONE_REGISTRY.register()
 def build_vgg_backbone(cfg, input_shape):
     """
-    Create a ResNet instance from config.
+    Create a VGG instance from config.
 
     Returns:
-        ResNet: a :class:`ResNet` instance.
+        VGG: a :class:`VGG` instance.
     """
     # need registration of new blocks/stems?
     #norm = cfg.MODEL.RESNETS.NORM
