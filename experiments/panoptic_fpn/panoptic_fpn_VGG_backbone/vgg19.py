@@ -1,3 +1,4 @@
+# the modification is based on detectron2. 
 # Copyright (c) Facebook, Inc. and its affiliates.
 import numpy as np
 import fvcore.nn.weight_init as weight_init
